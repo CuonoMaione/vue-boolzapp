@@ -134,8 +134,44 @@ input[type="text"]{
 
 .messages {
     height: calc(100% - 130px);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
 }
 
 body{
     background-color: green;
+}
+
+.sent,
+.received{
+    
+    padding: 1rem;
+    max-width: 40%;
+    border-radius: 20px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sent{
+    align-self: flex-end;
+    background-color: #d5f9ba;
+}
+
+
+.received{
+    align-self: flex-start;
+    background-color: white;
+}
+
+
+
+.date{
+    font-size: 10px;
+    text-align: end;
+    padding-left: 2rem;
+    padding-top: 1rem;
 }
