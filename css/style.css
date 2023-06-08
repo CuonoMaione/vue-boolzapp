@@ -14,13 +14,13 @@ main{
 nav{
     width: 40%;
     height: 100%;
-    background-color: red;
+    background-color:#eaeaea;
 }
 
 .contents{
     width: 60%;
     height: 100%;
-    background-color: green;
+    background-image: url("../img/mine.jpg");
 }
 
 .head-contents,
@@ -28,8 +28,8 @@ nav{
 
     height: 80px;
     width: 100%;
-    background-color: brown;
-    border: 3px solid black;
+    background-color: #eaeaea;
+    border-right: 1px solid gainsboro;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,4 +60,82 @@ img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.noticed{
+    
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+.noticed i {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #8edafc;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+[type="search"] {
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.firstUser,
+.secondUser{
+display: flex;
+background-color: white;
+padding: 0.3rem;
+border: 1px solid gray;
+
+}
+
+.firstUser img,
+.secondUser img {
+
+    width: 60px;
+    height: 60px;
+
+}
+
+.firstUser-text,
+.secondUser-text{
+    padding-left: 1rem;
+    
+}
+
+.Hours{
+    padding-left: 12rem;
+}
+
+.footer-contents{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+input[type="text"]{
+    width: 70%;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.messages {
+    height: calc(100% - 130px);
+}
+
+body{
+    background-color: green;
 }
