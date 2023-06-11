@@ -9,6 +9,7 @@ body{
     width: 100%;
     background: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dadbd3 , #dadbd3 100%);
     overflow: hidden;
+    font-family: 'Lato', sans-serif;
 }
 
 main{
@@ -133,9 +134,7 @@ border: 1px solid gray;
     
 }
 
-.Hours{
-    
-}
+
 
 .footer-contents{
     background-color: #eaeaea;
