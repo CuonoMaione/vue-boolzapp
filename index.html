@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">
     <main>
         <nav>
             <header class="head-nav">
@@ -37,38 +40,30 @@
             </div>
 
             <div class="searchBar">
+                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
                 <input type="search" placeholder="Cerca o inizia nuova chat">
             </div>
 
             <div class="Contacts">
-                <div class="firstUser">
-                    <img src="img/avatar_1.jpg" alt="">
+                <div class="firstUser" v-for="(contact , active) in contacts" @click="selectContact(active)">
+                    <img :src= 'contact.avatar' alt="">
                     <div class="firstUser-text">
-                        <div>Michele</div>
+                        <div>{{contact.name}}</div>
                         <p>Ultimo messaggio inviato</p>
                     </div>
                     <div class="Hours">
-                        22:20
+                       
                     </div>
                 </div>
-                <div class="secondUser">
-                    <img src="img/avatar_2.jpg" alt="">
-                    <div class="firstUser-text">
-                        <div>Michele</div>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="Hours">
-                        22:20
-                    </div>
-                </div>
-                </div>
+             
             </div>
+            
         </nav>
         <section class="contents">
             <header class="head-contents">
                 <div class="activeUser">
-                    <img src="img/avatar_1.jpg" alt="">
-                    <span>Michele</span>
+                    <img :src= "contacts[activeUser].avatar" alt="">
+                    <span>{{ contacts[activeUser].name }}</span>
                 </div>
                 <div class="settingChat">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -77,12 +72,9 @@
                 </div>
             </header>
             <section class="messages">
-
-                <span class="sent">ciaooo
-                    <span class="date">20:20</span>
-                </span>
-                <span class="received">ciaooo
-                    <span class="date">20:20</span>
+                <span v-for="messageObj in contacts[activeUser].messages" class="" :class=" (messageObj.status === 'sent' ? 'sent' : 'received')"  >
+                    {{messageObj.message}}
+                    <span class="date">20:15</span>
                 </span>
 
             </section>
@@ -93,5 +85,10 @@
             </footer>
         </section>
     </main>
+
+</div>
+
+
+    <script src="js/myscript.js"></script>
 </body>
 </html>
