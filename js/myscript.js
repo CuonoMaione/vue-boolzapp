@@ -167,6 +167,7 @@ createApp({
             }
         ],
             activeUser : 0,
+            
       }
 
     },
@@ -176,5 +177,4 @@ createApp({
             this.activeUser=active;
         }
     },
-
 }).mount('#app');

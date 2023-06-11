@@ -134,7 +134,7 @@ border: 1px solid gray;
 }
 
 .Hours{
-    padding-left: 12rem;
+    
 }
 
 .footer-contents{
@@ -198,4 +198,11 @@ input[type="text"]{
 .Contacts{
 height: calc(90vh - 212px);
 overflow: auto;
+}
+
+.last{
+    color: gray;
+    font-size: 0.9rem;
+    width: 100%;
+    padding-top: 0.5rem;
 }
