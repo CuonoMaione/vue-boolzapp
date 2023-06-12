@@ -111,8 +111,7 @@ img{
     border: white solid 1px;
 }
 
-.firstUser,
-.secondUser{
+.firstUser{
 display: flex;
 background-color: white;
 padding: 0.3rem;
@@ -120,20 +119,21 @@ border: 1px solid gray;
 
 }
 
-.firstUser img,
-.secondUser img {
+.firstUser img{
 
     width: 60px;
     height: 60px;
 
 }
 
-.firstUser-text,
-.secondUser-text{
+.firstUser-text{
     padding-left: 1rem;
     
 }
 
+.d-none{
+    display: none;
+}
 
 
 .footer-contents{

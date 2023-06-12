@@ -168,6 +168,7 @@ createApp({
         ],
             activeUser : 0,
             newMessage: "",
+            search: "",
 
       }
 
@@ -182,10 +183,23 @@ createApp({
             if (this.newMessage !== "") {
                 newMessageObj = {message: newMessage, status: 'sent',};
             this.contacts[this.activeUser].messages.push(newMessageObj);
-            this.newMessage=''; 
-            }
+            this.newMessage='';
+            }else{};
+        },
           
-       
+        searchContact() {
+            
+            this.contacts.forEach((contact) => {
+        
+                if (contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    contact.visible = true;
+                }
+                else {
+                    contact.visible = false;
+                }
+            })
+        },
+
     },
-},
+
 }).mount('#app');
