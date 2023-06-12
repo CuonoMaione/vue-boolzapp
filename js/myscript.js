@@ -167,7 +167,8 @@ createApp({
             }
         ],
             activeUser : 0,
-            
+            newMessage: "",
+
       }
 
     },
@@ -175,6 +176,16 @@ createApp({
     methods: {
         selectContact(active){
             this.activeUser=active;
-        }
+        },
+        
+        addMessage(newMessage){
+            if (this.newMessage !== "") {
+                newMessageObj = {message: newMessage, status: 'sent',};
+            this.contacts[this.activeUser].messages.push(newMessageObj);
+            this.newMessage=''; 
+            }
+          
+       
     },
+},
 }).mount('#app');
