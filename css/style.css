@@ -111,12 +111,17 @@ img{
     border: white solid 1px;
 }
 
+
 .firstUser{
 display: flex;
 background-color: white;
 padding: 0.3rem;
-border: 1px solid gray;
+border: 1px solid gainsboro;
 
+}
+
+.firstUser:hover{
+    background-color: gainsboro;
 }
 
 .firstUser img{
